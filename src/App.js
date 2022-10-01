@@ -1,7 +1,9 @@
+import Fetch from './components/Fetch/Fetch'
+
 function App() {
     return (
         <div>
-            <h1>React Boilerplate</h1>
+            <Fetch />
         </div>
     )
 }
