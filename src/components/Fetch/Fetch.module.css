@@ -1,5 +1,5 @@
 .fetch {
-    background-color: rgb(218, 251, 255);
+    background-color: var(--normalBlue);
     height: 100vh;
     padding: 20px 30px 40px 30px;
 }
@@ -9,9 +9,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(150, 236, 236);
+    background: var(--darkBlue);
     border-radius: 10px;
     padding: 30px 0;
+    color: var(--white);
 }
 
 .fetch > div:first-child > img {
@@ -35,8 +36,17 @@
 
 .fetch > div:last-child > p {
     text-transform: lowercase;
-    background-color: rgb(150, 236, 236);
+    background: var(--darkBlue);
+    color: var(--white);
     padding: 16px 0;
     border-radius: 10px;
     font-size: 14px;
+    transition: 250ms;
+}
+
+.fetch > div:last-child > p:hover {
+    opacity: 0.9;
+    transition: 250ms;
+    transform: translateY(-4px);
+    cursor: pointer;
 }

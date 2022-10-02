@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --darkBlue: hsl(210, 82%, 20%);
+    --normalBlue: hsl(210, 87%, 25%);
+    --white: hsl(0, 0%, 100%);
+}
+
 body {
     padding: 0;
     margin: 0;
