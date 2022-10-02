@@ -3,7 +3,7 @@ import Fetch from './components/Fetch/Fetch'
 function App() {
     return (
         <div>
-            <Fetch />
+            <Fetch title={'Github Info from Props'} />
         </div>
     )
 }
