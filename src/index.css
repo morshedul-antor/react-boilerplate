@@ -3,9 +3,9 @@
 }
 
 :root {
-    --darkBlue: hsl(210, 82%, 20%);
-    --normalBlue: hsl(210, 87%, 25%);
-    --white: hsl(0, 0%, 100%);
+    --background: rgb(236, 242, 245);
+    --primary: rgb(255, 255, 255);
+    --text: rgb(37, 35, 35);
 }
 
 body {
