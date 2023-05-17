@@ -1,10 +1,11 @@
+import { Routes, Route } from 'react-router-dom'
 import Fetch from './components/Fetch/Fetch'
 
 function App() {
     return (
-        <div>
-            <Fetch title={'Github Info from Props'} />
-        </div>
+        <Routes>
+            <Route path="" element={<Fetch title={'Github Info from Props'} />} />
+        </Routes>
     )
 }
 
