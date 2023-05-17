@@ -1,0 +1,85 @@
+
+######## API Methods ########
+
+### GET ####
+useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(
+                    `${api}/`,
+                    {
+                        method: 'GET',
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                )
+
+                const data = await response.json()
+
+                if (response.ok) {
+                   console.log('success')
+                }
+            } catch {
+                alert('Please check your internet connection!')
+            }
+        }
+        fetchData()
+}, [])
+
+
+### POST ####
+const handleSubmit = async () => {
+        const details = {
+           //
+        }
+
+        try {
+            const response = await fetch(`${api}/`, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(details),
+            })
+
+            const log  = await response.json()
+
+            if (response.ok) {
+                console.log('success')
+            } else {
+                alert(log.context + '!')
+            }
+        } catch {
+            alert('Please check your internet connection!')
+        }
+}
+
+
+### PATCH/PUT/DELETE ####
+const handle = async () => {
+        try {
+            const response = await fetch(`${api}/`, {
+                method: 'PATCH',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                },
+            })
+
+            const log  = await response.json()
+
+            if (response.ok) {
+                console.log('success')
+            } else {
+                alert(log.context + '!')
+            }
+        } catch {
+            alert('Please check your internet connection!')
+        }
+}
